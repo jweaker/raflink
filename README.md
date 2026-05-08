@@ -1,6 +1,6 @@
-# Al-Rafidain Links
+# معصرة الرافدين Links
 
-A simple static link page for Al-Rafidain social profiles.
+A simple static link page for معصرة الرافدين social profiles.
 
 ## Links
 
