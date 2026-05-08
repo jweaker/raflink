@@ -1,0 +1,117 @@
+:root {
+  --green: #214f17;
+  --green-deep: #16390f;
+  --olive: #9eaf37;
+  --cream: #f0f1e9;
+  --cream-soft: #fafbf6;
+  --text: #173112;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at top, rgba(158, 175, 55, 0.18), transparent 34rem),
+    linear-gradient(180deg, var(--cream-soft), var(--cream));
+}
+
+.page {
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+  padding: 32px 18px;
+}
+
+.profile {
+  width: min(100%, 430px);
+  text-align: center;
+}
+
+.logo {
+  display: block;
+  width: min(74vw, 250px);
+  height: auto;
+  margin: 0 auto 18px;
+  filter: drop-shadow(0 18px 28px rgba(22, 57, 15, 0.13));
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2rem, 7vw, 3.25rem);
+  line-height: 1;
+  font-weight: 800;
+  color: var(--green-deep);
+}
+
+p {
+  margin: 14px auto 28px;
+  max-width: 30ch;
+  font-size: 1rem;
+  line-height: 1.55;
+  color: rgba(23, 49, 18, 0.72);
+}
+
+.links {
+  display: grid;
+  gap: 12px;
+}
+
+.link-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 58px;
+  padding: 0 20px;
+  border: 1px solid rgba(33, 79, 23, 0.14);
+  border-radius: 8px;
+  color: var(--cream-soft);
+  background: var(--green);
+  box-shadow: 0 12px 22px rgba(22, 57, 15, 0.12);
+  font-size: 1.05rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition:
+    transform 160ms ease,
+    background-color 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.link-button:hover,
+.link-button:focus-visible {
+  background: var(--green-deep);
+  box-shadow: 0 16px 28px rgba(22, 57, 15, 0.18);
+  transform: translateY(-2px);
+}
+
+.link-button:focus-visible {
+  outline: 3px solid rgba(158, 175, 55, 0.5);
+  outline-offset: 3px;
+}
+
+.link-button span:last-child {
+  color: var(--olive);
+  font-size: 1.25rem;
+}
+
+@media (max-width: 380px) {
+  .page {
+    padding-inline: 14px;
+  }
+
+  .link-button {
+    min-height: 54px;
+    padding-inline: 16px;
+  }
+}
